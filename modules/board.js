@@ -1,9 +1,7 @@
 const gameBoard = (row, col) => {
   const board = new Array(row);
-  for (let i = 0; i < row; i++) {
-    board[i] = new Array(col).fill(null);
-  }
+  board.fill([]).map((el, i) => i < col ? el.push(null) : false);
   return board;
 };
-
+console.log(gameBoard(8, 8));
 export default gameBoard;
